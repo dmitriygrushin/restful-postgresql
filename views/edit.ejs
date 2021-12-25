@@ -1,0 +1,7 @@
+<h1>This is the edit page for todo# <%= todo.todo_id %>: <%= todo.description %>  </h1>
+
+<form action="/<%= todo.todo_id %>?_method=PUT" method="POST">
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description">
+    <button>Submit</button>
+</form>

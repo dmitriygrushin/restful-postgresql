@@ -1,0 +1,15 @@
+<h1>This is the index page</h1>
+
+<form action="/" method="POST">
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description">
+    <button>Submit</button>
+</form>
+
+<% for (let todo of todos) {%> 
+    <h3><%= todo.todo_id %> : <%= todo.description %>  </h3>
+    <a href="/<%= todo.todo_id %>/edit">Edit todo</a>
+    <form action="/<%= todo.todo_id %>?_method=DELETE" method="POST"">
+        <button>Delete todo</button>
+    </form>
+<% } %> 
